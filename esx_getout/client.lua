@@ -26,7 +26,7 @@ Citizen.CreateThread(function()
                 TaskLeaveVehicle(ped,vehicle,0)
             end
         elseif IsVehicleModel(GetVehiclePedIsIn(GetPlayerPed(-1), false), GetHashKey('polmav')) and GetPedInVehicleSeat(vehicle, -1) == GetPlayerPed(-1) then
-            if PlayerData.job.name ~= 'police' and PlayerData.job.name ~= 'ambulance' and PlayerData.job.name ~= 'mechanic' and PlayerData.job.name ~= 'bennys' and PlayerData.job.name ~= 'autopaja' then
+            if PlayerData.job.name ~= 'police' and PlayerData.job.name ~= 'ambulance' then
                 TriggerEvent('esx:showNotification', "~r~Sinulla ei ole oikeutta ajaa virka ajoneuvolla")
                 TaskLeaveVehicle(ped,vehicle,0)
             end
