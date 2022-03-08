@@ -4,13 +4,13 @@ local PlayerData    = {}
 Citizen.CreateThread(function()
     while ESX == nil do
         TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-        Citizen.Wait(0)
+        Wait(0)
     end
 end)
 
-Citizen.CreateThread(function()
+CreateThread(function()
     while true do
-        Citizen.Wait(500)
+        Wait(500)
         local vehicle = GetVehiclePedIsIn(GetPlayerPed(-1), false)
         local ped = GetPlayerPed(-1)
         PlayerData = ESX.GetPlayerData()
